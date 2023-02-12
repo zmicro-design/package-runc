@@ -26,10 +26,7 @@ install() {
 
   case $arch in
   arm64) ;;
-
-  amd64)
-    arch="x86_64"
-    ;;
+  amd64) ;;
   *)
     log::error "[$(timestamp)] unsupport arch: $arch"
     return 1
@@ -64,6 +61,10 @@ install() {
   # download
   log::info "[$(timestamp)][package][$name] downloading ..."
   os::download $tmp_file $url
+  if [ "$?" != "0" ]; then
+    log::error "[$(timestamp)][package][$name] failed to download from $url ."
+    return 1
+  fi
 
   # install
   log::info "[$(timestamp)][package][$name] installing ..."
