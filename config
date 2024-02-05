@@ -2,7 +2,7 @@
 
 export PACKAGE_CORE_NAME="runc"
 export PACKAGE_CORE_BIN_NAME="$PACKAGE_CORE_NAME"
-export PACKAGE_CORE_VERSION=v1.1.4
+export PACKAGE_CORE_VERSION=v1.1.12
 export PACKAGE_CORE_ORG="opencontainers"
 
 export PACKAGE_CORE_GIT_REPOSITORY="https://github.com/${PACKAGE_CORE_ORG}/runc"
